@@ -4,9 +4,9 @@ import CustomButton from "./_component/CustomButton"
 export default function Home() {
   return (
     <>
-      <div className="p-4 pt-12 h-screen ">
-        <main className="px-4 h-5/6  flex flex-col justify-evenly items-center">
-          <section className=" md:max-w-xl">
+      <div className="p-4 pt-12 h-screen">
+        <main className="px-4 flex flex-col justify-evenly items-center md:flex-row md:justify-center bg-black-100 md:h-5/6 ">
+          <section className=" md:max-w-md  lg:max-w-lg ">
             <h1 className="text-[max(4vw,24px)] font-extrabold tracking-wide font-mono leading-snug">
               Welcome to{" "}
               <span className="bg-gradient-to-r from-limedSpruce-500 via-bismark-600 to-jetStream-400 bg-clip-text text-transparent">
@@ -29,7 +29,7 @@ export default function Home() {
               height={500}
               className=""
             />
-            <section className="flex justify-evenly mt-16">
+            <section className="flex justify-evenly mt-8">
               <CustomButton href={"/store"} text={"Shop"} />
               <CustomButton href={"/about"} text={"About us"} />
             </section>
