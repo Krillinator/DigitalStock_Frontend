@@ -28,6 +28,7 @@ const config: Config = {
           950: "#000000",
         },
 
+        // Primary Color
         limedSpruce: {
           50: "#f2f9f9",
           100: "#ddedf0",
@@ -40,6 +41,7 @@ const config: Config = {
           950: "#1a2a32",
         },
 
+        // TBD
         bismark: {
           50: "#f4f6f7",
           100: "#e2e8eb",
@@ -54,6 +56,7 @@ const config: Config = {
           950: "#21262b",
         },
 
+        // Secondary
         jetStream: {
           50: "#f2f9f9",
           100: "#deefee",
@@ -68,6 +71,7 @@ const config: Config = {
           950: "#1c2e30",
         },
 
+        // Tertiary
         whiteLilac: {
           50: "#f4f4f9",
           100: "#e7e7f2",
