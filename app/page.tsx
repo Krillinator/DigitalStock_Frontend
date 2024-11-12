@@ -1,5 +1,5 @@
 import Image from "next/image"
-import CustomButton from "./_component/CustomButton"
+import CustomButton from "./_component/ui-elements/CustomButton"
 
 export default function Home() {
   return (
