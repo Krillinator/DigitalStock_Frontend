@@ -12,7 +12,15 @@ export default function SignUp() {
 
   function onSubmit(event: FormEvent) {
     event.preventDefault()
+
     // Signup Logic
+    // POST => Fetch()
+    // TODO - FIx the status code throw
+    fetch("http://localhost:8080/api/v1/register", {
+      method: "POST",
+      headers: { "content-type": "application/json;charset=UTF-8" },
+      body: JSON.stringify(user),
+    })
   }
 
   return (
@@ -47,6 +55,8 @@ export default function SignUp() {
                 onChange={(event) => handleUserChange(event)}
               />
             </section>
+
+            <button type="submit">Register</button>
           </form>
         </section>
       </div>
