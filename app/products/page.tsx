@@ -8,10 +8,14 @@ export default async function Store() {
 
   return (
     <main>
-      <div className="flex items-center justify-center">
+      <div className="flex flex-col items-center justify-center">
         <p>Products</p>
-        <img src="https://example.com/images/smartphone-x.jpg" alt="" />
-        <section>
+
+        <section className="flex flex-col gap-8">
+          {/*
+          {productList.length > 0 && <ProductCard product={productList[0]} />}
+          */}
+
           {productList.map((product, index) => (
             <ProductCard product={product} key={index} />
           ))}
