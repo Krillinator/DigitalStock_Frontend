@@ -21,6 +21,9 @@ export default function SignUp() {
       headers: { "content-type": "application/json;charset=UTF-8" },
       body: JSON.stringify(user),
     })
+      .then((response) => response.json())
+      .then((data) => console.log("Login successful:", data))
+      .catch((error) => console.error("Error:", error))
   }
 
   return (

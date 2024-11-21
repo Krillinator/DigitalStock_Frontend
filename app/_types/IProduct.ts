@@ -9,3 +9,4 @@ export interface IProduct {
   price: number
   image: string
 }
+
