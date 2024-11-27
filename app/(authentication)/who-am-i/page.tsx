@@ -1,17 +1,18 @@
 "use client"
 import { IErrorResponse } from "@/app/_types/IErrorResponse"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 
 export default function WhoAmI() {
+  const [username, setusername] = useState<string>("")
+
   useEffect(() => {
+    console.log(document.cookie)
+
     const fetchUserData = async () => {
       try {
         const response = await fetch("http://localhost:8080/api/v1/who-am-i", {
           method: "GET",
-          headers: {
-            // localStorage must appear in client components
-            Authorization: `Bearer ${localStorage.getItem("authToken")}`, // Add the Bearer prefix here
-          },
+          credentials: "include",
         })
 
         if (!response.ok) {
@@ -28,6 +29,7 @@ export default function WhoAmI() {
 
         // You decide how to parse the body: JSON, text, etc.
         const data = await response.text() // Or .json() if the response body is JSON
+        setusername(data)
         console.log("Loading Spring User:", data)
       } catch (error) {
         console.error("Error occurred:", error)
@@ -39,7 +41,7 @@ export default function WhoAmI() {
 
   return (
     <div className="p-4">
-      <header>Current Logged in user</header>
+      <header> {username}</header>
     </div>
   )
 }
